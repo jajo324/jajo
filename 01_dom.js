@@ -14,3 +14,15 @@ function changeBackgroundColor(){
 }
 
 blueBtnElement.addEventListener('click', changeBackgroundColor)
+
+const randomBtn=document.getElementById("buttonRandom")
+const randomNbm=document.getElementById("randomNumber")
+function generateRandom(max){
+    return Math.floor(Math.random()*max)
+}
+
+function randomNumberGenerator(){
+    randomNbm.innerHTML=generateRandom(100)
+}
+
+randomBtn.addEventListener(`click`,randomNumberGenerator)
